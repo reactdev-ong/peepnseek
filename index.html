@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="UTF-8" />
+<title>PeepnSeek</title>
+<meta name="description"/>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script src="js/scrollIt.min.js"></script>
+<script>$(function() { $.scrollIt(); });</script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            var $jungle = $(".jungle_charc_animation"),
+            current = 0;
+            function showNext() {
+				if(current == 5)
+				  current = 0;
+                if (current < $jungle.length ) {
+					$jungle.eq(current).show();
+                    $jungle.eq(current).delay(2000).addClass("show").fadeOut('fast', function () {
+                        $jungle.eq(current).removeClass("show").show();
+						current++;
+                        showNext();
+                    });
+                }
+            }
+            showNext();
+		});
+		
+		$(document).ready(function () {
+            var $sea = $(".sea_charc_animation"),
+            current = 3;
+            function showNext() {
+				if(current == 5)
+				  current = 0;
+                if (current < $sea.length ) {
+					$sea.eq(current).show();
+                    $sea.eq(current).delay(2000).addClass("show").fadeOut('fast', function () {
+                        $sea.eq(current).removeClass("show").show();
+						current++;
+                        showNext();
+                    });
+                }
+            }
+            showNext();
+		});
+		
+		$(document).ready(function () {
+            var $bug = $(".bug_charc_animation"),
+            current = 1;
+            function showNext() {
+				if(current == 5)
+				  current = 0;
+                if (current < $bug.length ) {
+					$bug.eq(current).show();
+                    $bug.eq(current).delay(2000).addClass("show").fadeOut('fast', function () {
+                        $bug.eq(current).removeClass("show").show();
+						current++;
+                        showNext();
+                    });
+                }
+            }
+            showNext();
+		});
+		$(document).ready(function () {
+			$("#pull").click(function(){
+				$("nav ul").toggleClass("show")	
+			})	
+		});	
+		
+		$(window).on('scroll',function() {    
+    		var scroll = $(window).scrollTop();
+			if (scroll >= 530) {
+        	$(".dwnload_btn").addClass("download_pos_fix");
+			} else {
+				$(".dwnload_btn").removeClass("download_pos_fix");
+			}
+});
+		
+</script>
+   <script type="text/javascript">
+$(window).on('scroll',function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 500) {
+        $(".bottom_arrow").addClass("show_arrow");
+    } else {
+        $(".bottom_arrow").removeClass("show_arrow");
+    }
+});
+</script>
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+	<header >
+    	<div class="mid_cnt"  data-scroll-index='0'>
+        	<a class="logo" href="index.html"><img src="images/logo.png"></a>
+            <nav class="nav ">
+                 <a href="#" id="pull">Menu</a>
+        <ul>
+                	<li><a href="#" data-scroll-nav='0'>HOME</a></li>       
+                    <li><a href="#" data-scroll-nav='1'>ABOUT US  </a></li>     
+                    <li><a href="#" class="arrow_icon">THEMES</a>
+                    	<ul>
+                        	<li><a href="#" data-scroll-nav='2'>Junlge Theme</a></li>
+                            <li><a href="#" data-scroll-nav='3'>Sea Theme</a></li>
+                            <li><a href="#" data-scroll-nav='4'>Bug Theme</a></li>
+                        </ul>
+                    </li>      
+                    <li><a href="#" data-scroll-nav='5'>OUR PRODUCTS  </a></li>
+                    <li><a href="#" data-scroll-nav='6'>CONTACT US </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="main_page">
+    	<div class="top_bg" >
+    	<div class="mid_cnt">
+        	<div class="character_col">
+        	<div class="hidden_char_col">
+            	<ul>
+                	<li><a href="#"><img src="images/bug_img.png"  data-scroll-nav='4'></a></li>
+                    <li><a href="#"><img src="images/sea_img.png"  data-scroll-nav='3'></a></li>
+                    <li><a href="#"><img src="images/jungle_img.png"  data-scroll-nav='2'></a></li>
+                    <li><a href="#"><img src="images/africa_img.png"></a></li>
+                    <li><a href="#"><img src="images/waterzoo_img.png"></a></li>
+                </ul>
+                
+                <span class="hidden_txt">Find our Hidden Characters</span>
+                
+            </div>
+            <div class="clear"></div>
+            <a class="dwnload_btn" href="https://itunes.apple.com/ao/app/peepnseek/id1087708546?mt=8" target="_blank">DOWNLOAD APP</a>
+            
+        </div>
+    </div>
+    
+</div>
+
+
+<div class="white_bg"  data-scroll-index='1'>
+	<div class="mid_cnt">
+   	  <h3>About Peep<span>N</span>Seek</h3>
+      <p>Welcome to the worlds latest craze for toddlers … The PeepnSeek Hidden Characters APP has been developed for toddlers
+under the age of 6. The purpose the APP is to teach hand/eye coordination as well as educate children about different
+animals, bugs and sea creatures from around the world. The PeepnSeek game coupled with the Beautiful Creatures music is
+an amazing way to help your toddler enjoy learning and interacting with a fun game.</p>
+<h5>Tell your friends about PeepnSeek App for Kids</h5>
+<ul class="social_col">
+	<li><a href="https://www.facebook.com/peepnseek" target="_blank" class="fb">Facebook</a></li>
+    <li><a href="https://twitter.com/VBPeepnSeek" target="_blank" class="tw">Twitter</a></li>
+     <li><a href="mailto:peepnseek@ledahealth.ca" class="email_btn">Email</a></li>
+</ul>
+
+<div class="video_img">
+	<iframe src="https://www.youtube.com/embed/z3fDIZq6k50?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+    </div>
+</div>
+
+<div class="jungle_theme_bg pad_top50" data-scroll-index='2'>
+	<div class="main_container pos_rel pad_100">
+   
+        	<h3>The jungle theme consists of the following 5 characters:</h3>
+        <ul class="theme_list">
+        	<li class="theme_logo">
+            	
+            <img src="images/logo.png" width="142" height="142" alt="PeepNSeek"> 
+            </li>
+        	<li>
+            	<span class="theme_img giraff_icon"></span>
+                <h6>George the Giraffe</h6>
+            </li>
+            
+            <li>
+            	<span class="theme_img elephant_icon"></span>
+                <h6>Eden the Elephant</h6>
+            </li>
+            
+            <li>
+            	<span class="theme_img lion_icon"></span>
+                <h6>Lenny the Lion</h6>
+            </li>
+            
+           <li>
+            	<span class="theme_img monkey_icon"></span>
+                <h6>Monte the Monkey</h6>
+            </li>
+            
+            <li>
+            	<span class="theme_img hippo_icon"></span>
+                <h6>Heidi the Hippo</h6>
+            </li>
+        </ul>
+        
+       <p> The screen above shows characters not found yet, once the balloon countdown is over the characters disappear and the game starts. Try and have your toddler memorize the
+locations of the characters before the balloons disappear. This will help with memory.</p>
+
+<p>Once the balloons disappear the that level now starts. Wait until you see the character appear and touch it. 
+The character will become color and pop out. Once you find all
+5 characters you will be prompted to move to the <br/>
+<span>next level.</span>
+
+</p>
+      
+        
+    </div>
+    <div class="jungle_theme pos_rel">
+    <div class="main_container pos_rel">
+    	<div class="theme_col">
+        	<div class="jungle_character_1 jungle_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Eden the Elephant</span>
+            </div>
+            
+            <div class="jungle_character_2 jungle_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Lenny the Lion</span>
+            </div>
+            
+            <div class="jungle_character_3 jungle_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Heidi the Hippo</span>
+            </div>
+            
+            <div class="jungle_character_4 jungle_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Monte the Monkey</span>
+            </div>
+            
+            <div class="jungle_character_5 jungle_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found George the Giraffe</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="sea_theme_bg pad_top50" data-scroll-index='3'>
+	<div class="main_container pos_rel pad_100">
+   
+        <h3>The SEA theme consists of the following 5 characters:</h3>
+  <ul class="theme_list sea_list">
+  <li class="theme_logo">
+            	
+            <img src="images/logo.png" width="142" height="142" alt="PeepNSeek"> 
+            </li>
+        	<li>
+            	<span class="theme_img starfish_icon"></span>
+                <h6>Steve the Starfish</h6>
+             </li>
+            
+            <li>
+            	<span class="theme_img turtle_icon"></span>
+                <h6>Teddy the Turtle</h6>
+             </li>
+            
+           <li>
+            	<span class="theme_img dolphin_icon"></span>
+                <h6>Danny the Dolphin</h6>
+             </li>
+            
+            <li>
+            	<span class="theme_img fish_icon"></span>
+                <h6>Flo the Fish</h6>
+             </li>
+            
+            <li>
+            	<span class="theme_img octopus_icon"></span>
+                <h6>Olivia the Octopus</h6>
+             </li>
+        </ul>
+        
+       <p> The screen above shows characters not found yet, once the balloon countdown is over the characters disappear and the game starts. Try and have your toddler memorize the
+locations of the characters before the balloons disappear. This will help with memory.</p>
+
+<p>Once the balloons disappear the that level now starts. Wait until you see the character appear and touch it. 
+The character will become color and pop out. Once you find all
+5 characters you will be prompted to move to the <br/>
+<span>next level.</span>
+
+</p>
+      
+        
+    </div>
+    <div class="sea_theme pos_rel">
+    <div class="main_container pos_rel">
+    	<div class="theme_col">
+        	<div class="sea_character_1 sea_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Olivia the Octopus</span>
+            </div>
+            
+            <div class="sea_character_2 sea_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Flo the Fish</span>
+            </div>
+            
+            <div class="sea_character_3 sea_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Danny the Dolphin</span>
+            </div>
+            
+            <div class="sea_character_4 sea_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Steve the Starfish</span>
+            </div>
+            
+            <div class="sea_character_5 sea_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Teddy the Turtle</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+    
+    
+    <div class="bug_theme_bg pad_top50" data-scroll-index='4'>
+	<div class="main_container pos_rel pad_100">
+   
+      <h3>The BUGS theme consists of the following 5 characters:</h3>
+        <ul class="theme_list">
+        <li class="theme_logo">
+            	
+            <img src="images/logo.png" width="142" height="142" alt="PeepNSeek"> 
+            </li>
+        	<li>
+            	<span class="theme_img bee_icon"></span>
+                <h6>Brad the Bee</h6>
+            </li>
+            
+            <li>
+            	<span class="theme_img butterfly_icon"></span>
+                <h6>Brit the Butterfly</h6>
+             </li>
+            
+            <li>
+            	<span class="theme_img ladybug_icon"></span>
+                <h6>Lucy the Ladybug</h6>
+             </li>
+            
+            <li>
+            	<span class="theme_img caterpillar_icon"></span>
+                <h6>Cliff the Caterpillar</h6>
+             </li>
+            
+            <li>
+            	<span class="theme_img snail_icon"></span>
+                <h6>Sami the Snail</h6>
+             </li>
+        </ul>
+        
+       <p> The screen above shows characters not found yet, once the balloon countdown is over the characters disappear and the game starts. Try and have your toddler memorize the
+locations of the characters before the balloons disappear. This will help with memory.</p>
+
+<p>Once the balloons disappear the that level now starts. Wait until you see the character appear and touch it. 
+The character will become color and pop out. Once you find all
+5 characters you will be prompted to move to the <br/>
+<span>next level.</span>
+
+</p>
+      
+        
+    </div>
+    <div class="bug_theme pos_rel">
+    <div class="main_container pos_rel">
+    	<div class="theme_col">
+        	<div class="bug_character_1 bug_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Lucy the Ladybug</span>
+            </div>
+            
+            <div class="bug_character_2 bug_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Sami the Snail</span>
+            </div>
+            
+            <div class="bug_character_3 bug_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Cliff the Caterpillar </span>
+            </div>
+            
+            <div class="bug_character_4 bug_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Brad the Bee</span>
+            </div>
+            
+            <div class="bug_character_5 bug_charc_animation">
+            	<span class="alert_theme">GOOD JOB!  You have found Brit the Butterfly</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+    
+    
+    
+    
+    
+     <div class="white_bg vital_bg"   data-scroll-index='5'>
+	<div class="mid_cnt">
+   	  <h3>Vital Baby's Character Themed Cups</h3>
+       <p> As your baby grows, choosing the correct cup can help him build confidence with drinking. Our exclusive Flexisafe® soft spouts, grips and handles go gentle on your baby’s sensitive mouth and tiny hands. The Vital Baby® BPA Free ‘age staged’ cup range is excellent for every stage of babies’ development.</p>
+
+<p>Introducing the Vital Baby PeepnSeek range of sippy cups for toddlers. Our range of PeepnSeek™ Cups are not only ideal for toddler drinking but they are also molded with each of the PeepnSeek characters on the cup. This makes drinking time fun and educational for you and your toddler. The cups have super soft non-spill spouts that are easy to drink from and are perfectly shaped to help the transition from breast or bottle to a cup.</p>
+<p>PeepnSeek cup lids are interchangeable with all the PeenSeek cups.</p>
+<p><strong>Available Lids for each of the 3 PeepnSeek play themes:</strong></p>
+<ul class="theme_bottle_list">
+	<h2>PeepnSeek <strong>Jungle</strong> Theme:</h2>
+    <li>9oz Hard Spout</li>
+    <li>9oz Comfy Spout</li>
+    <li>9oz Flip-top silicone Straw</li>
+    <li>9oz 2 handle cup</li>
+</ul>
+<ul class="theme_bottle_list">
+	<h2>PeepnSeek <strong>Sea</strong> Theme:</h2>
+    <li>9oz Hard Spout</li>
+    <li>9oz Comfy Spout</li>
+    <li>9oz Flip-top silicone Straw</li>
+    <li>9oz 2 handle cup</li>
+</ul>
+<ul class="theme_bottle_list">
+	<h2>PeepnSeek <strong>Bugs</strong> Theme:</h2>
+    <li>9oz Hard Spout</li>
+    <li>9oz Comfy Spout</li>
+    <li>9oz Flip-top silicone Straw</li>
+    <li>9oz 2 handle cup</li>
+</ul>
+<ul class="vital_list">
+	<li>
+    	<h6 class="third_prd">Bug theme cup with comfy spout</h6>
+        <span class="prd_img"><img src="images/bug_1.gif"></span>
+      </li>
+      
+      <li>
+    	<h6 class="third_prd">Bug theme cup with comfy spout</h6>
+        <span class="prd_img">
+      <img src="images/bug_2.gif"></span> 
+      </li>
+      
+      <li>
+    	<h6>Sea theme cup with comfy spout</h6>
+       <span class="prd_img">
+      <img src="images/sea_1.gif"></span> 
+      </li>
+       <li>
+    	<h6>Sea theme cup with comfy spout</h6>
+       <span class="prd_img">
+      <img src="images/sea_2.gif"></span> 
+      </li>
+        <li>
+    	<h6>Sea theme cup with comfy spout</h6>
+       <span class="prd_img">
+      <img src="images/sea_3.gif"></span> 
+      </li>
+       <li>
+    	<h6 class="sec_prd"> Jungle Theme Cup with flip-top straw lid</h6>
+       <span class="prd_img">
+      <img src="images/jungle_1.gif"></span> 
+      </li>
+      <li class="wdt38">
+    	<h6 class="sec_prd">Jungle Theme 2 handle cup with hard spout</h6>
+       <span class="prd_img">
+      <img src="images/jungle_2.gif"></span> 
+      </li>
+       <li class="wdt38">
+    	<h6 class="sec_prd">Jungle Theme 2 handle cup with hard spout</h6>
+       <span class="prd_img">
+      <img src="images/jungle_3.gif"></span> 
+      </li>
+</ul>
+
+
+    </div>
+    </div>
+
+ <div class="white_bg vital_bg sponsor_bg" data-scroll-index='6'>
+	<div class="mid_cnt">
+    	<div class="spon_lft_col">
+        	<p>The PeepnSeek website and App game has been sponsored by the following global baby brands.  Please click on the links and see whats new.</p>
+        <ul class="sponsor_list">
+        	<li><a href="#"><img src="images/beutiful_creatures_logo.png"></a></li>
+            <li><a href="#"><img src="images/vital_baby_logo.png"></a></li>
+            <li><a href="#"><img src="images/aleva_logo.png"></a></li>
+            <li><a href="#"><img src="images/babyworks_logo.png"></a></li>
+        </ul>
+        </div>
+        <div class="spon_rht_col">
+        	<h3>Vital Innovations Inc.</h3>
+           	<p>USA: Ashland Mass 01721 USA</p>
+            <p>Canada: Thornhill ON Canada</p>
+            <p>Tel: 1 877 957 2229</p>
+        </div>
+    </div>
+    </div>
+    
+    <div class="fotter_wrap">
+    	
+    </div>
+
+</div>
+<a href="#" class="bottom_arrow" data-scroll-nav='0'>&nbsp;</a>
+</body>
+</html>
